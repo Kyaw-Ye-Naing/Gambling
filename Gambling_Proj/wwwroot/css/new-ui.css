@@ -1,0 +1,414 @@
+﻿@charset "utf-8";
+* { box-sizing: border-box; }
+.nav-bg-color {
+	background-color: #2C3136;
+}
+
+.topbar-img {
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	width: 180px;
+	height: 100%;
+	align-items: center;
+}
+
+.topbar-img img{
+	width: 100%;
+}
+
+.table-data th {
+	background-color: #0749E3;
+	color: #EFEFEF;
+}
+
+.table-data tbody tr{
+	background-color: #F2F2F2;
+}
+
+.table-data tbody tr:hover {
+	background-color: #ddd;
+	cursor: pointer;
+}
+
+.right {
+	float: right;
+}
+
+.wrapper-form {
+	background-color: #fff;
+	padding: 15px 30px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	margin: 20px auto;
+	color: #000;
+}
+
+.wrapper-form  input {
+	border-radius: 13px;
+	border: 1px solid #D4CFCF;
+	padding: 5px 14px;
+	margin-right: 20px;
+	background-color: #D4CFCF;
+}
+
+/* Table */
+.payment-table {
+	border-collapse: collapse;
+	padding: 20px;
+}
+
+.payment-table label {
+	font-weight: 500;
+}
+
+.payment-table tr, td {
+	padding: 10px;
+	margin: 5px;
+}
+.payment-table td:not(:last-child) {
+	margin-right: 20px; 
+}
+
+.payment-table  input[type=text], .payment-table input[type=date] {
+	padding: 8px 12px;
+	border-radius: 8px;
+	border: none;
+	outline: none;
+	background: #D4CFCF;
+	font-weight: bold;
+	width: 100%;
+}
+
+.send {
+	border: none;
+	outline: none;
+	min-width: 150px;
+	background-color: #0191D9;
+	color: white;
+	border-radius: 25px;
+	padding: 12px 14px;
+	margin: 40px 20px;
+	font-size: 18px;
+}
+
+.send:hover {
+	background-color: #0051A3;
+	color: #fff;
+	text-decoration: none;
+
+}
+
+/* content Data */
+.content-data {
+	max-width: 1200px;
+	background: #fff;
+	border-radius: 13px;
+	margin: 20px auto;
+	padding: 20px 12px;
+}
+
+.row-box {
+	display: block;
+	width: 33%;
+}
+
+.header-title p{
+    font-size:2.1em;color:#643a12;
+}
+@media screen and (max-width: 800px)
+{
+	.row-box {
+		width: 100%;
+	}
+    .header-title p{
+        font-size:1.5em;
+        color:#643a12;
+    }
+}
+
+.row-box input 
+{
+	border: 1px solid #000;
+	border-radius: 10px;
+	text-align: left;
+	padding: 3px 6px;
+}
+
+.box {
+	background-color: #2C7CE9;
+	border-radius: 4px;
+	padding: 20px 12px;
+	margin: 10px 5px;
+	color: #ECE4E4;
+}
+
+.box-container {
+	padding: 5px;
+}
+
+.box-container label:not(:first-child) {
+	margin-left: 5px;
+}
+
+/* Responsive */
+@media screen and (max-width: 800px)
+{
+	/* Form */
+	.wrapper-form {
+		width: 100%;
+	    margin: auto;
+	    padding: 10px 4px;
+	}
+	
+	
+	/* Payment Heading */
+	.payment-heading {
+		display: block;
+	}
+	
+	.payment-heading-content {
+	display: block;
+	margin: 5px 2px;
+	}
+	
+	.payment-heading-content label {
+	display: block;
+	width: 100%;
+	text-align: center;
+	}
+	
+	.payment-heading-content input {
+	padding: 8px 12px;
+	display: block;
+	width: 100%;
+	border: none;
+	outline: none;
+	border-radius: 8px;
+	background: #D4CFCF;
+	font-weight: bold;
+	}
+	
+	/* Payment Table */
+	.payment-table { padding: 10px; }
+	
+	.payment-table tr {
+		padding: 2px;
+		width: 100%;
+		margin: 2px;
+	}
+	
+	.payment-table td:not(:last-child) { margin-right: 0px; }
+	
+	.payment-table td {
+		width: 100%;
+		display: block;
+		margin: 2px;
+	}
+	
+}
+
+#list {
+	padding: 5px 10px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #0749E3;
+	border-radius: 5px;
+	color: #fff;
+}
+
+/* Page Heading */
+.payment-heading {
+	width: 100%;
+}
+
+.payment-heading-content {
+	display: inline-block;
+	margin: 10px 20px 10px 5px;
+}
+
+.payment-heading-content input
+{
+	padding: 8px 12px;
+	border: none;
+	outline: none;
+	border-radius: 8px;
+	background: #D4CFCF;
+	font-weight: bold;
+}
+
+
+/* Table */
+.payment-table {
+	border-collapse: collapse;
+	padding: 20px;
+}
+
+.payment-table label {
+	font-weight: 500;
+}
+
+.payment-table tr, td {
+	padding: 10px;
+	margin: 5px;
+}
+.payment-table td:not(:last-child) {
+	margin-right: 20px; 
+}
+
+.payment-table  input[type=text], .payment-table input[type=date] {
+	padding: 8px 12px;
+	border-radius: 8px;
+	border: none;
+	outline: none;
+	background: #D4CFCF;
+	font-weight: bold;
+	width: 100%;
+}
+
+/* Enrollment List */
+.box-4 {
+	margin: 10px auto;
+	width: 100%;
+	padding:  5px 12px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	color: #000;
+}
+
+.box-radio {
+	margin: 10px auto;
+	width: 100%;
+	padding:  5px 12px;
+}
+
+.box-radio input[type=radio]
+{
+	margin-right: 20px;
+	color: blue;
+}
+
+.box-4 input, .box-4 select, .box-4 button {
+	border: none;
+	outline: none;
+	width: inherit;
+	background-color: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+.box-4 button {
+	color: #F2F2F2;
+}
+/* End Enrollment List */
+
+/* Attendance */
+.input-file-container {
+	width: 100%;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	padding: 4px 10px;
+	margin: auto;
+}
+
+
+
+.input-file-container button {
+	margin-left: 25px;
+}
+
+.input-file-container label {
+	cursor: pointer;
+}
+
+.input-file-container label:hover {
+	text-decoration: underline;
+	color: #4e73df;
+}
+
+
+#datatabel { color: black; }
+
+#dataTable tbody { color: black; }
+
+.input-date {
+	display: inline-block;
+}
+
+.input-date input {
+	border: 1px solid #ddd;
+	border-radius: 13px;
+	padding: 5px;
+	margin-left: 20px;
+}
+
+.input-date .update {
+	margin-left: 20px;
+}
+
+
+
+.sidebar-ng-color  .nav-item .nav-link {
+    color:#643a12;
+}
+
+.sidebar-ng-color .sidebar-brand {
+  color: #fff;
+}
+
+.sidebar-ng-color hr.sidebar-divider {
+  border-top: 1px solid #643a12;
+}
+
+.sidebar-ng-color .sidebar-heading {
+  color: #fff;
+}
+
+.sidebar-ng-color .nav-item .nav-link {
+  color: #643a12;
+}
+
+.sidebar-ng-color .nav-item .nav-link i {
+  color:#643a12;
+}
+
+.sidebar-ng-color .nav-item .nav-link:active, .sidebar-ng-color .nav-item .nav-link:focus, .sidebar-ng-color .nav-item .nav-link:hover {
+  color: #000;
+  background: #ddd;
+}
+
+.sidebar-ng-color .nav-item .nav-link:active i, .sidebar-ng-color .nav-item .nav-link:focus i, .sidebar-ng-color .nav-item .nav-link:hover i {
+  color: #000;
+  background: #ddd;
+}
+
+.sidebar-ng-color .nav-item .nav-link[data-toggle="collapse"]::after {
+  color:#643a12;
+}
+
+/*Dashboard*/
+.sidebar-ng-color .nav-item.active .nav-link {
+  color: #643a12;
+  opacity: 0.8;
+}
+
+.sidebar-ng-color .nav-item.active .nav-link i {
+  color: #643a12;
+}
+/*Toggle button*/
+.sidebar-ng-color #sidebarToggle {
+  background-color: #643a12;
+}
+
+.sidebar-ng-color #sidebarToggle::after {
+  color: #fff;
+}
+
+.sidebar-ng-color #sidebarToggle:hover {
+  background-color:#D2B48C;
+}
+
+.sidebar-ng-color.toggled #sidebarToggle::after {
+  color: #fff;
+}
