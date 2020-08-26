@@ -1,0 +1,173 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/AccordionTable.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" type="text/css" href="  https://cdn.datatables.net/v/dt/dt-1.10.16/r-2.2.1/datatables.min.css" crossorigin="anonymous">
+    <style>
+        .txt {
+            background-color: transparent;
+            color: #343053;
+            font-size: medium;
+            outline: none;
+            outline-style: none;
+            outline-offset: 0;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: solid #eeeeee 2px;
+            padding: 3px 7px;
+        }
+        th {
+            background-color: #560505;
+            color:#fff;
+        }
+          
+        .accordion td {
+            height: 50px;
+            vertical-align: middle;
+            text-align: center;
+            color: #fff;
+            font-size: medium;
+            background-color: #8d4e7e;
+        }
+
+        .yellow {
+            color: yellow !important;
+        }
+
+        .accordion {
+            word-break: break-all;
+        }
+        .btn_search{
+            background-color: #fff;
+            border: none;
+            color: #b12424;
+            padding: 12px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Darker background on mouse-over */
+        .btn:hover {
+            background-color:#ddd;
+        }
+    </style>
+</head>
+<h1>Index</h1>
+<div class="container my-4">
+    <div class="header" style="padding-bottom:2rem;">
+        <div class="row">
+            <div class="col-md-4">
+                <label>Date:</label><input type="text" id="datepicker" class="txt">
+                <button type="submit" class="btn_search"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="col-md-5"></div>
+            <div class="col-md-3">
+                <input type="text" id="search" class="txt" placeholder="Search">
+                <button type="submit" class="btn_search"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">SINO</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Points</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr class="accordion-toggle collapsed" id="accordion2" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                    <td class="expand-button"></td>
+                    <td>1</td>
+                    <td>User1</td>
+                    <td>body</td>
+                    <td>50000</td>
+
+                </tr>
+                <tr class="hide-table-padding">
+                    <td></td>
+                    <td colspan="4">
+                        <div id="collapseTwo" class="collapse in p-3">
+                            <div style="background-color:#d2d84b;">
+                                <h3 style="text-align:center;background-color:#b12424;margin-bottom:0;">Norway Adeccoligeon</h3>
+                                <table border="1" class="accordion table-responsive">
+                                    <tr><td style="background-color:#b12424;">10/8/2020 10:30PM</td></tr>
+                                    <tr><td colspan="2">Star Jordan</td><td colspan="2" width="140px">dsfadffsfasf<span class="yellow">2-38</span></td><td width="140px">Amount</td></tr>
+                                    <tr><td style="background-color: #560505;">Over</td><td colspan="2" width="70px" class="yellow" ;>3-40</td><td>Under</td><td width="140px" style="background-color: #560505;" class="yellow">40000</td></tr>
+                                </table>
+                            </div>
+                            <div style="background-color:#d2d84b;">
+                                <h3 style="text-align:center;background-color:#b12424;margin-bottom:0;">Norway Adeccoligeon</h3>
+                                <table border="1" class="accordion table-responsive">
+                                    <tr><td style="background-color:#b12424;">10/8/2020 10:30PM</td></tr>
+                                    <tr><td colspan="2">Star Jordan</td><td colspan="2" width="140px">dsfadffsfasf<span class="yellow">2-38</span></td><td width="140px">Amount</td></tr>
+                                    <tr><td style="background-color: #560505;">Over</td><td colspan="2" width="70px" class="yellow" ;>3-40</td><td>Under</td><td width="140px" style="background-color: #560505;" class="yellow">40000</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="accordion-toggle collapsed" id="accordion1" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
+                    <td class="expand-button"></td>
+                    <td>1</td>
+                    <td>User1</td>
+                    <td>moaung</td>
+                    <td>7890000</td>
+
+                </tr>
+                <tr class="hide-table-padding">
+                    <td></td>
+                    <td colspan="3">
+                        <div id="collapseOne" class="collapse in p-3">
+                            <div style="background-color:#d2d84b;padding-bottom:50px;">
+                                <h3 style="text-align:center;background-color:#b12424;margin-bottom:0;">USA Major League</h3>
+                                <table border="1" class="accordion">
+                                    <tr><td style="background-color:#b12424;">10/8/2020 10:30PM</td></tr>
+                                    <tr><td colspan="2">Star Jordan<span class="yellow">2-38</span></td><td colspan="2" width="140px">dsfadffsfasf</td><td width="140px">Amount</td></tr>
+                                    <tr><td>Over</td><td colspan="2" width="70px" class="yellow">3-40</td><td style="background-color: #560505;">Under</td><td width="140px" style="background-color: #560505;" class="yellow">40000</td></tr>
+                                </table>
+                            </div>
+                            <div style="background-color:#d2d84b;padding-bottom:50px;">
+                                <h3 style="text-align:center;background-color:#b12424;margin-bottom:0;">USA Major League</h3>
+                                <table border="1" class="accordion">
+                                    <tr><td style="background-color:#b12424;">10/8/2020 10:30PM</td></tr>
+                                    <tr><td colspan="2">Star Jordan<span class="yellow">2-38</span></td><td colspan="2" width="140px">dsfadffsfasf</td><td width="140px">Amount</td></tr>
+                                    <tr><td>Over</td><td colspan="2" width="70px" class="yellow">3-40</td><td style="background-color: #560505;">Under</td><td width="140px" style="background-color: #560505;" class="yellow">40000</td></tr>
+                                </table>
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+@section Scripts{
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+
+    </script>
+}

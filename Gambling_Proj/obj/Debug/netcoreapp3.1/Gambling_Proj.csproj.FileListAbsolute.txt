@@ -97,6 +97,7 @@ C:\Users\Lenovo\source\repos\Gambling_Proj\Gambling_Proj\obj\Debug\netcoreapp3.1
 C:\Users\Lenovo\source\repos\Gambling_Proj\Gambling_Proj\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Lenovo\source\repos\Gambling_Proj\Gambling_Proj\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Lenovo\source\repos\Gambling_Proj\Gambling_Proj\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Lenovo\source\repos\Gambling_Proj\Gambling_Proj\obj\Debug\netcoreapp3.1\Razor\Views\UsersGamR\Index.cshtml.g.cs
 C:\Users\Lenovo\source\repos\Gambling_Proj\Gambling_Proj\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\Lenovo\source\repos\Gambling_Proj\Gambling_Proj\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\Lenovo\source\repos\Gambling_Proj\Gambling_Proj\obj\Debug\netcoreapp3.1\Gambling_Proj.RazorTargetAssemblyInfo.cache
@@ -109,3 +110,4 @@ C:\Users\Lenovo\source\repos\Gambling_Proj\Gambling_Proj\obj\Debug\netcoreapp3.1
 C:\Users\Lenovo\source\repos\Gambling_Proj\Gambling_Proj\obj\Debug\netcoreapp3.1\Gambling_Proj.pdb
 C:\Users\Lenovo\source\repos\Gambling_Proj\Gambling_Proj\obj\Debug\netcoreapp3.1\Gambling_Proj.genruntimeconfig.cache
 C:\Users\Lenovo\source\repos\Gambling_Proj\Gambling_Proj\obj\Debug\netcoreapp3.1\Gambling_Proj.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\Gambling_Proj\Gambling_Proj\obj\Debug\netcoreapp3.1\Razor\Views\UsersGamR\View.cshtml.g.cs

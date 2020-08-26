@@ -32,26 +32,29 @@
     <link rel="stylesheet" type="text/css" href="~/Login/css/main.css">
     <!--===============================================================================================-->
     <style>
-    body { background-image: url('~/wwwroot/Login/images/football.jpg'); }
-        img{
+        .container-login100 {
+            background-image:url(' @Url.Content("~/Login/images/football.jpg")');
+            background-color: aqua;
+        }
+        .img-user {
             border-radius: 50%;
             color: #653a34;
             background-color: #653a34;
         }
         .wrap-login100 {
             background-color: #653a34;
-            opacity:2;
+            opacity:0.8;
 
         }
     </style>
 </head>
-<body>
+<body id="bg">
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
                 <form class="login100-form validate-form">
                     <span class="login100-form-title p-b-48">
-                        <img src="~/Login/images/user.png" class="img-user" height="170" width="170"/>
+                        <img src="~/Login/images/user.jpg" class="img-user" height="170" width="170"/>
                     </span>
 
                     <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
