@@ -1,4 +1,4 @@
-﻿
+﻿@model TblUser
 @{
     Layout = null;
 }
@@ -9,30 +9,21 @@
     <title>Login V2</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/Login/vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/Login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/Login/fonts/iconic/css/material-design-iconic-font.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/Login/vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/Login/vendor/css-hamburgers/hamburgers.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/Login/vendor/animsition/css/animsition.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/Login/vendor/select2/select2.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/Login/vendor/daterangepicker/daterangepicker.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/Login/css/util.css">
+    <!--Favicon Icon-->
+    <link rel="icon" type="image/png" href="~/favicon.ico" />
+    <!--Main CSS-->
     <link rel="stylesheet" type="text/css" href="~/Login/css/main.css">
-    <!--===============================================================================================-->
+    <!--Icons-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Bootstrap-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
-        .container-login100 {
+        body {
             background-image:url(' @Url.Content("~/Login/images/football.jpg")');
             background-color: aqua;
         }
@@ -46,72 +37,67 @@
             opacity:0.8;
 
         }
+        .closebtn {
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .login100-form-btn {
+            background-color: #560505 !important;
+        }
+       .ico{
+           font-size:2rem;
+           color:#FFFFFF !important;
+       }
+       .login-card{
+           margin-top:100px;
+
+       }
     </style>
 </head>
-<body id="bg">
-    <div class="limiter">
-        <div class="container-login100">
-            <div class="wrap-login100">
-                <form class="login100-form validate-form">
-                    <span class="login100-form-title p-b-48">
-                        <img src="~/Login/images/user.jpg" class="img-user" height="170" width="170"/>
-                    </span>
+<body>
+    <div class="col-lg-4 col-md-7 col-sm-6 col-xs-12 login-card">
+        <form id="login-form" class="col-lg-12" method="post" asp-action="LogIn" asp-controller="Home">
+            <div class="col-lg-12 logo-kapsul">
 
-                    <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
-                        <input class="input100" type="text" name="email">
-                        <span class="focus-input100" data-placeholder="Email"></span>
-                    </div>
-
-                    <div class="wrap-input100 validate-input" data-validate="Enter password">
-                        <span class="btn-show-pass">
-                            <i class="zmdi zmdi-eye"></i>
-                        </span>
-                        <input class="input100" type="password" name="pass">
-                        <span class="focus-input100" data-placeholder="Password"></span>
-                    </div>
-
-                    <div class="container-login100-form-btn">
-                        <div class="wrap-login100-form-btn">
-                            <div class="login100-form-bgbtn"></div>
-                            <button class="login100-form-btn">
-                                Login
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="text-center p-t-115">
-                        <span class="txt1">
-                            Don’t have an account?
-                        </span>
-
-                        <a class="txt2" href="#">
-                            Sign Up
-                        </a>
-                    </div>
-                </form>
+                <img class="logo" src="~/Login/images/user.jpg" alt="Logo" />
+            </div>@if (@TempData["Error"] != null)
+            {
+                <span class="d-inline-block p-2 bg-warning text-white" style="font-size:x-large;text-align:center;">@TempData["Error"]</span>}<br /><br /><br />
+            <div style="clear:both;"></div>
+            <div class="group">
+                <input type="text" required asp-for="Username" autocomplete="off">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label><i class="material-icons input-ikon">person_outline</i><span class="span-input">UserName</span></label>
             </div>
-        </div>
+
+            <div class="group">
+                <input type="password" required asp-for="Password">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label><i class="material-icons input-sifre-ikon">lock</i><span class="span-input">Password</span></label>
+            </div>
+
+            <input type="submit" value="Submit" class="giris-yap-buton" style="width:100%;border-style:none;">
+
+            <div class="forgot-and-create tab-menu">
+                <a class="sifre-hatirlat-link">Forget Password ?</a>
+             </div>
+        </form>
     </div>
-
-
     <div id="dropDownSelect1"></div>
-
-    <!--===============================================================================================-->
-    <script src="~/Login/vendor/jquery/jquery-3.2.1.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="~/Login/vendor/animsition/js/animsition.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="~/Login/vendor/bootstrap/js/popper.js"></script>
-    <script src="~/Login/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="~/Login/vendor/select2/select2.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="~/Login/vendor/daterangepicker/moment.min.js"></script>
-    <script src="~/Login/vendor/daterangepicker/daterangepicker.js"></script>
-    <!--===============================================================================================-->
-    <script src="~/Login/vendor/countdowntime/countdowntime.js"></script>
-    <!--===============================================================================================-->
-    <script src="~/Login/js/main.js"></script>
-
+    @section Scripts{
+        <!--Bootstrap Javascript-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <!--JQuery-->
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!--===============================================================================================-->
+        <!--Fontawesome-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+    }
 </body>
 </html>
