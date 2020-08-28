@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
-    <link rel="stylesheet" type="text/css" href="  https://cdn.datatables.net/v/dt/dt-1.10.16/r-2.2.1/datatables.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/r-2.2.1/datatables.min.css" crossorigin="anonymous">
     <style>
         .txt {
             background-color: transparent;
@@ -20,7 +20,7 @@
             border-top: none;
             border-left: none;
             border-right: none;
-            border-bottom: solid #eeeeee 2px;
+            border-bottom: solid #000 2px;
             padding: 3px 7px;
         }
 
@@ -55,13 +55,19 @@
             cursor: pointer;
         }
 
-        /* Darker background on mouse-over */
         .btn:hover {
             background-color: #ddd;
         }
+
+        .expand-button {
+            font-size: 2.5rem;
+          
+            background-color: #000;
+            color: #fff;
+        }
     </style>
 </head>
-<h1>Index</h1>
+<h1>@ViewBag.Username</h1>
 <div class="container my-4">
     <div class="header" style="padding-bottom:2rem;">
         <div class="row">
@@ -91,7 +97,7 @@
             <tbody>
 
                 <tr class="accordion-toggle collapsed" id="accordion2" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                    <td class="expand-button"></td>
+                    <td class="expand-button" style="text-align:center;"></td>
                     <td>1</td>
                     <td>User1</td>
                     <td>body</td>
@@ -107,17 +113,39 @@
                                     Norway Adeccoligeon
                                 </h4>
                                 <table border="1" class="accordion table-responsive">
-                                    <tr><td style="background-color:#470707;">10/8/2020 10:30PM</td></tr>
-                                    <tr><td colspan="2">Star Jordan</td><td colspan="2" width="140px">dsfadffsfasf<span class="yellow">2-38</span></td><td width="140px">Amount</td></tr>
-                                    <tr><td style="background-color: #560505;">Over</td><td colspan="2" width="70px" class="yellow" ;>3-40</td><td>Under</td><td width="140px" style="background-color: #560505;" class="yellow">40000</td></tr>
+                                    <tr>
+                                        <td style="background-color:#470707;">10/8/2020 10:30PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Star Jordan</td>
+                                        <td colspan="2" width="140px">dsfadffsfasf<span class="yellow">2-38</span></td>
+                                        <td width="140px">Amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color: #560505;">Over</td>
+                                        <td colspan="2" width="70px" class="yellow" ;>3-40</td>
+                                        <td>Under</td>
+                                        <td width="140px" style="background-color: #560505;" class="yellow">40000</td>
+                                    </tr>
                                 </table>
                             </div>
                             <div style="background-color: #d6d693;">
                                 <h4 style="text-align: center;background-color: #470707;margin-bottom: 0;color:#fff;">Norway Adeccoligeon</h4>
                                 <table border="1" class="accordion table-responsive">
-                                    <tr><td style="background-color:#470707;">10/8/2020 10:30PM</td></tr>
-                                    <tr><td colspan="2">Star Jordan</td><td colspan="2" width="140px">dsfadffsfasf<span class="yellow">2-38</span></td><td width="140px">Amount</td></tr>
-                                    <tr><td>Over</td><td colspan="2" width="70px" class="yellow" ;>3-40</td><td style="background-color: #560505;">Under</td><td width="140px" style="background-color: #560505;" class="yellow">40000</td></tr>
+                                    <tr>
+                                        <td style="background-color:#470707;">10/8/2020 10:30PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Star Jordan</td>
+                                        <td colspan="2" width="140px">dsfadffsfasf<span class="yellow">2-38</span></td>
+                                        <td width="140px">Amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Over</td>
+                                        <td colspan="2" width="70px" class="yellow" ;>3-40</td>
+                                        <td style="background-color: #560505;">Under</td>
+                                        <td width="140px" style="background-color: #560505;" class="yellow">40000</td>
+                                    </tr>
                                 </table>
                             </div>
                         </div>
@@ -168,10 +196,4 @@
     <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-        $(function () {
-            $("#datepicker").datepicker();
-        });
-
-    </script>
 }

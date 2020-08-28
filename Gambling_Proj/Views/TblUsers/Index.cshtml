@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Gambling_Proj.Models.TblUser>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/dist/css/styles.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet" />
+<style>
+    th {
+        background-color: #560505;
+        text-align: center;
+        color: #fff;
+    }
+    td {
+        vertical-align: middle;
+        text-align: center;
+    }
+    label {
+        color: #560505;
+    }
+</style>
+<div style="background-color: #470707;">
+    <h1 class="mt-4" style="text-align:center;color:#fff;">Dashboard</h1>
+</div>
+
+<div class="panel-heading add-item-form" style="margin-top:50px;">
+    @await Html.PartialAsync("CreatePartial", new TblUser())
+</div>
+<table class="table table-hover table-responsive-sm" id="myTable">
+    <thead>
+        <tr>
+            <th width="20%">
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th width="40%">
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th width="20%">
+                @Html.DisplayNameFor(model => model.Lock)
+            </th>
+            <th width="20%">
+                @Html.DisplayNameFor(model => model.RoleId)
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.UserId" class="btn btn-primary" style="width:200px;background-color: #560505">Edit</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lock)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoleId)
+                </td>
+               <!-- <td>
+                    <a asp-action="Edit" asp-route-id="@item.UserId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.UserId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.UserId">Delete</a>
+                </td>-->
+            </tr>
+        }
+    </tbody>
+</table>
+@section Scripts{
+    
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+<script>
+
+    $(document).ready(function () {
+        $('#myTable').DataTable();
+    });
+</script>  
+}

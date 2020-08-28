@@ -1,0 +1,71 @@
+﻿@model Gambling_Proj.Models.TblRole
+
+@{
+    ViewData["Title"] = "Create";
+}
+<head>
+    <style>
+
+        .txt {
+            background-color: transparent;
+            color: #343053;
+            font-size: medium;
+            outline: none;
+            outline-style: none;
+            outline-offset: 0;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: solid #560505 2px;
+            padding: 3px 7px;
+        }
+    </style>
+</head>
+
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Role" class="control-label"></label><br />
+                <input asp-for="Role" class="txt" />
+                <span asp-validation-for="Role" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Discription" class="control-label"></label><br />
+                <input asp-for="Discription" class="txt" />
+                <span asp-validation-for="Discription" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            
+            
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Active" class="control-label"></label>&nbsp;
+                <input asp-for="Active" type="checkbox" style="margin-top:50px;"/>
+                <span asp-validation-for="Active" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+           
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <button type="submit" value="Create" class="btn btn-primary" style="background-color: #560505;"><i class="fas fa-save"></i>&nbsp;Save</button>
+            </div>
+            </div>
+    </div>
+</form>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>

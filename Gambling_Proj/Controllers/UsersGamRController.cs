@@ -12,6 +12,7 @@ namespace Gambling_Proj.Controllers
         // GET: UsersGamRController
         public IActionResult Index()
         {
+
             return View();
         }
 

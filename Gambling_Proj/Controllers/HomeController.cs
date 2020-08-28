@@ -4,9 +4,11 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Gambling_Proj.Models;
 using Microsoft.VisualStudio.Web.CodeGeneration;
+
 
 namespace Gambling_Proj.Controllers
 {
@@ -22,6 +24,8 @@ namespace Gambling_Proj.Controllers
 
         public IActionResult Index()
         {
+            var user=HttpContext.Session.GetString("Username");
+            ViewBag.UserName = user;
             return View();
         }
 
@@ -34,13 +38,26 @@ namespace Gambling_Proj.Controllers
                     var v = db.TblUser.Where(a => a.Username.Equals(model.Username) && a.Password.Equals(model.Password)).FirstOrDefault();
                     if (v != null)
                     {
+                    var loc = db.TblUser.Where(a => a.Username == v.Username).First().Lock;
+                   if (loc == true)
+                      {
+                           TempData["Lock"] = "Your Account is Locked!";
+                            return View("LogIn", model);
+                       }
+                      else
+                       {
+                       
+                        //save user information in session
+                        HttpContext.Session.SetString("Username", v.Username);
+                        return RedirectToAction("Index");
+                    }
                     // HttpCookie login = new HttpCookie("login");
                     // Response.Cookies["login"]["Id"] = v.Id.ToString();
                     // Response.Cookies["login"]["Name"] = v.Name.ToString();
                     // Response.Cookies["login"]["UserType"] = hh.UserTypes.Where(a => a.Id == v.UserTypeId).First().Name;
                     // login.Expires = DateTime.Now.AddSeconds(30);
                     // Response.Cookies.Add(login);
-                   return RedirectToAction("Index");
+                
                     }
                     else
                     {

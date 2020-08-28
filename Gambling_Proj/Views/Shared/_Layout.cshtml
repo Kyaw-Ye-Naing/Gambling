@@ -8,51 +8,60 @@
     <meta name="author" content="" />
     <title>Dashboard - SB Admin</title>
     <link href="~/dist/css/styles.css" rel="stylesheet" />
-    
+
     <style>
         .navbar {
             background-color: #560505;
         }
+
         .navbar-brand {
             color: yellow;
         }
-        .navbar-brand:hover{
-            color:#ffd800;
-        }
+
+            .navbar-brand:hover {
+                color: #ffd800;
+            }
+
         #sidebarToggle {
-        color:#ffffff;
+            color: #ffffff;
         }
+
         .fa-bars {
             color: #ffffff;
         }
-        .img-user{
-            border-radius:50%;
-            height:100px;
-            width:100px;
+
+        .img-user {
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
         }
+
         .nav-link {
             background-color: #560505;
-            color:#fff;
+            color: #fff;
         }
-      
+
         .sb-sidenav-menu {
             background-color: #560505;
             color: #fff;
         }
-        .sb-sidenav-dark .sb-sidenav-menu .nav-link{
+
+        .sb-sidenav-dark .sb-sidenav-menu .nav-link {
             color: #fff;
         }
-        .fass{
-            color:#fff;
+
+        .fass {
+            color: #fff;
         }
+
         #userDropdown:hover {
-            color:#fff;
+            color: #fff;
         }
+
         h1 {
             margin-top: 0.5rem !important;
             font-size: 1.5rem;
         }
-
     </style>
 </head>
 <body class="sb-nav-fixed nav_bar">
@@ -102,28 +111,31 @@
                         </a>
                         <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                    SubMenu1
-                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                </a>
-                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                <a class="nav-link collapsed" asp-controller="TblUsers" asp-action="Index">
+                                    Users
+                                   </a>
+                                <!--<div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
                                         <a class="nav-link" href="login.html">Item</a>
                                         <a class="nav-link" href="register.html">Item</a>
                                         <a class="nav-link" href="password.html">item</a>
                                     </nav>
-                                </div>
+                                </div>-->
+                                <a class="nav-link collapsed" asp-controller="TblRoles" asp-action="Index">
+                                    User Roles
+                                </a>
                                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                    SubMenu2
+                                    Football Teams
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </a>
-                                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-                                    <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="401.html">Item1</a>
-                                        <a class="nav-link" href="404.html">Item2</a>
-                                        <a class="nav-link" href="500.html">Item3</a>
-                                    </nav>
-                                </div>
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                    Commision
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                    Unit/Point
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
                             </nav>
                         </div>
 
@@ -135,27 +147,28 @@
                         <div class="collapse" id="collapseSetting" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapse_sub" aria-expanded="false" aria-controls="pagesCollapse_sub">
-                                    SubMenu1
+                                    History Clean Setting
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </a>
-                                <div class="collapse" id="pagesCollapse_sub" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                <!--<div class="collapse" id="pagesCollapse_sub" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
                                         <a class="nav-link" href="login.html">Item1</a>
                                         <a class="nav-link" href="register.html">Item2</a>
                                         <a class="nav-link" href="password.html">item3</a>
                                     </nav>
-                                </div>
+                                </div>-->
                                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapse_Sub2" aria-expanded="false" aria-controls="pagesCollapse_Sub2">
-                                    SubMenu2
+                                    Gambling Teams Setting
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </a>
-                                <div class="collapse" id="pagesCollapse_Sub2" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-                                    <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="401.html">401 Page</a>
-                                        <a class="nav-link" href="404.html">404 Page</a>
-                                        <a class="nav-link" href="500.html">500 Page</a>
-                                    </nav>
-                                </div>
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapse_Sub2" aria-expanded="false" aria-controls="pagesCollapse_Sub2">
+                                    Gambling Account Setting
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapse_Sub2" aria-expanded="false" aria-controls="pagesCollapse_Sub2">
+                                    Role Permission
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
                             </nav>
                         </div>
 
@@ -187,9 +200,7 @@
             </nav>
         </div>
         <div id="layoutSidenav_content">
-            <div style="background-color: #470707;">
-                <h1 class="mt-4" style="text-align:center;color:#fff;">Dashboard</h1>
-            </div>
+           
             <main>
 
                 <div class="container-fluid">

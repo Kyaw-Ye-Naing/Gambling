@@ -24,6 +24,9 @@ namespace Gambling_Proj
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            //Add Session Service
+            services.AddDistributedMemoryCache();
+            services.AddSession();
 
         }
 
@@ -46,7 +49,8 @@ namespace Gambling_Proj
             app.UseRouting();
 
             app.UseAuthorization();
-
+            //Session
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
